@@ -176,7 +176,7 @@ exports.verifySignature = async (req, res) => {
 
         try{
             //verify the signature
-            const generatedSignature = crypto.createHmac("sha256", process.env.RAZORPAY_SECRET).update(body.toString()).digest("hex");
+            const generatedSignature = crypto.createHmac("sha256", processa.env.RAZORPAY_SECRET).update(body.toString()).digest("hex");
             if(generatedSignature === razorpay_signature) {
                 await enrolleStudent(courses, userId);
             }

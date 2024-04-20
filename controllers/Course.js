@@ -75,7 +75,7 @@ exports.createCourse = async (req, res) => {
 		// Upload the Thumbnail to Cloudinary
 		const thumbnailImage = await uploadImageToCloudinary(
 			thumbnail,
-			process.env.FOLDER_NAME
+			processa.env.FOLDER_NAME
 		);
 		console.log(thumbnailImage);
 		// Create a new course with the given details
@@ -248,7 +248,7 @@ exports.editCourse = async (req, res) => {
 		const thumbnail = req.files.thumbnailImage
 		const thumbnailImage = await uploadImageToCloudinary(
 		  thumbnail,
-		  process.env.FOLDER_NAME
+		  processa.env.FOLDER_NAME
 		)
 		course.thumbnail = thumbnailImage.secure_url
 	  }

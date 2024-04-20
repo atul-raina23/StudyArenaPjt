@@ -5,17 +5,17 @@ require('dotenv').config()
 const mailSender = async (email, title, body) => {
     try{
             let transporter = nodemailer.createTransport({
-                host:process.env.MAIL_HOST,
+                host:processa.env.MAIL_HOST,
                 port: 587,
                 auth:{
-                    user: process.env.MAIL_USER,
-                    pass: process.env.MAIL_PASS,
+                    user: processa.env.MAIL_USER,
+                    pass: processa.env.MAIL_PASS,
                 }
             })
 
 
             let info = await transporter.sendMail({
-                from: `"Study Notion" <${process.env.MAIL_USER}>`,
+                from: `"Study Notion" <${processa.env.MAIL_USER}>`,
                 to:`${email}`,
                 subject: `${title}`,
                 html: `${body}`,

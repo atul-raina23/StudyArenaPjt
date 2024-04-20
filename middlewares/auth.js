@@ -18,7 +18,7 @@ exports.auth = async (req, res, next) => {
         }
 
         // Verify the token
-        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        const decoded = jwt.verify(token, processa.env.JWT_SECRET);
         req.user = decoded;
         next();
     } catch (error) {
@@ -90,7 +90,7 @@ exports.isAdmin = async (req, res, next) => {
     }
    }*/
    const jwt = require("jsonwebtoken");
-require("dotenv").config(); // Load environment variables from .env file
+require("dotenv").config(); // Load environment variables from a.env file
 const User = require("../models/User");
 
 // Middleware for authentication
@@ -109,7 +109,7 @@ exports.auth = async (req, res, next) => {
         }
 
         // Verify the token using the updated secret key
-        const decoded = jwt.verify(token, process.env.JWT_SECRET); // Use the updated secret key
+        const decoded = jwt.verify(token, processa.env.JWT_SECRET); // Use the updated secret key
         req.user = decoded;
         console.log();
         next();
