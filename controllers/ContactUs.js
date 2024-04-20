@@ -17,7 +17,7 @@ exports.contactUs = async (req, res) => {
       phoneNo: `${phoneNo ? phoneNo : "null"}`,
     };
     const info = await mailSender(
-      processa.env.CONTACT_MAIL,
+      process.env.CONTACT_MAIL,
       "Enquery",
       `<html><body>${Object.keys(data).map((key) => {
         return `<p>${key} : ${data[key]}</p>`;

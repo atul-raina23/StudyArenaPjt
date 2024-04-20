@@ -143,7 +143,7 @@ exports.updateDisplayPicture = async (req, res) => {
     }
 	const uploadDetails = await uploadImageToCloudinary(
 		image,
-		processa.env.FOLDER_NAME
+		process.env.FOLDER_NAME
 	);
 	console.log(uploadDetails);
 

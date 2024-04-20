@@ -29,7 +29,7 @@ exports.createSubSection = async (req, res) => {
 		// Upload the video file to Cloudinary
 		const uploadDetails = await uploadImageToCloudinary(
 			video,
-			processa.env.FOLDER_VIDEO
+			process.env.FOLDER_VIDEO
 		);
 
 		console.log(uploadDetails);
@@ -77,7 +77,7 @@ exports.updateSubSection = async (req,res) => {
 		if(video){
 		 uploadDetails = await uploadImageToCloudinary(
 			video,
-			processa.env.FOLDER_VIDEO
+			process.env.FOLDER_VIDEO
 		);
 		}
 
